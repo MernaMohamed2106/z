@@ -1,0 +1,216 @@
+:root{
+    --main-color:rgb(35, 143, 189);
+}
+
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  background-color: white;
+  color: black;
+  transition: 0.3s;
+}
+
+.dark {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+header .container{ 
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    max-height: 60px;
+    border-bottom: 1px solid #b3adad42;
+    position: relative;
+}
+header .container .des{
+    display: flex;
+    align-items: center;
+}
+header .container .des img{
+     max-height:30px;
+     width: 40px;
+     border: 2px solid var(--main-color);
+     border-radius: 40%;
+     box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+header .container .des h1{
+  padding: 20px;
+  color: var(--main-color);
+}
+header .container .styl{ 
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 30px;
+}
+header .container .styl li{ 
+    cursor: pointer;
+    
+}
+header .container .styl .mode .non ,
+header .container .styl li .theme { 
+    display: none;
+}
+header .container .styl li .theme  ul { 
+    list-style: none;
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 15px;
+    display: flex;
+    position: absolute;
+    top: 65px;
+    right: 109px;
+    width: 150px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 15px rgba(71, 71, 71, 0.3);
+    background-color: white;
+    z-index: 100;
+    justify-content: center;
+}
+header .container .sty li .theme ul li { 
+    width: 30PX;
+    height: 30PX;
+    border-radius: 50%;
+}
+header .container .sty li .theme ul .active { 
+    width: 35PX;
+    height: 35PX;
+    border: 2px solid #8afeff;;
+}
+header .container .styl li .theme ul li:first-child {
+    background-color: rgb(35, 143, 189);
+   }
+header .container .styl li .theme ul li:nth-child(2){
+    background-color: rgb(101, 53, 16);
+   }
+header .container .styl li .theme ul li:nth-child(3){
+    background-color: rgb(109, 48, 193);
+   }
+header .container .styl li .theme ul li:nth-child(4) {
+    background-color: rgb(93, 75, 228);
+   }
+header .container .styl li .theme ul li:nth-child(5) {
+    background-color: rgb(156, 43, 77);
+   }
+ header .container .styl li .theme ul li:nth-child(6) {
+    background-color: rgb(37, 143, 97);
+   }
+header .container .styl li .p { 
+   padding: 15px;
+   position: relative;
+}
+header .container .styl li .p::before  { 
+    content: "";
+    width: 1px;
+    height: 16px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 30px;
+    left: -6px;
+}
+header .container .styl li .p img{ 
+     max-height:40px;
+     width: 40px;
+     border: 2px solid var(--main-color);
+     border-radius: 50%;
+}
+
+header .container .styl li:hover  .pinf,
+header .container .styl li:hover .theme  {
+        display: block;
+}
+
+header .container .styl li .pinf{ 
+    list-style: none;
+    position: absolute;
+    top: 65px;
+    right: 40px;
+    width: 150px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 15px rgba(71, 71, 71, 0.3);
+    background-color: white;
+    z-index: 100;
+    display: none;
+  
+}
+header .container .styl li .pinf::before,
+header .container .styl li .theme  ul::before{ 
+    content: "";
+    position: absolute;
+    top: -25px;
+    right: 22px;
+    height: 0;
+    border-width: 15px;
+    border-color: transparent transparent white transparent;
+    border-style: solid;
+      z-index: 90;
+}
+header .container .styl li .pinf li{ 
+   padding: 5px 20px ;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   margin: 0;
+   
+}
+header .container .styl li .pinf li a{ 
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: rgb(105, 104, 104);
+} 
+
+/* sideBar */
+.page{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    height: 100vh;
+}
+.page aside{
+    background-color:var(--main-color);
+    
+}
+.page aside .container{
+   padding: 30px;
+}
+.page aside .container ul{
+   list-style: none;
+   font-size: 25px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   align-items: flex-start;
+}
+.page aside .container ul li {
+   width: 100%;
+   padding: 10px 15px;
+   cursor: pointer;
+}
+.page aside .container ul li a  {
+   text-decoration: none;
+   color: #1e1e1e;
+}
+.page aside .container ul li span{
+   padding: 10px;
+}
+ aside .container ul  .active{
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.page aside .container ul li .o{
+    margin-top: 10px;
+    padding: 10px;
+     gap: 5px;
+    font-size: 20px;
+    /* display: none; */
+}
+
