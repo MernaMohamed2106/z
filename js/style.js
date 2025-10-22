@@ -38,12 +38,16 @@ let section = document.querySelectorAll("ul .one");
 let submenu
 
 section.forEach(li => {
-  li.addEventListener("click", e => {
-    if(e.target.dataset.text=="pro"){
+  li.querySelectorAll(".f").forEach(f =>{
+      f.addEventListener("click", e => {
+         if(e.target.parentElement.dataset.text=="pro"){
          submenu = document.querySelector("ul .one .pro");
     }
-    else{
+    else if (e.target.parentElement.dataset.text=="set"){
           submenu = document.querySelector("ul .one .set");
+    }
+    else{
+       submenu = false;
     }
   
     if (submenu) {
@@ -53,30 +57,28 @@ section.forEach(li => {
         submenu.style.display = "block";
       }
     }
-    e.target.parentElement.querySelectorAll(".active").forEach(m => {
+    e.target.parentElement.querySelectorAll(".f.active").forEach(m => {
       m.classList.remove("active");
     });
-    e.target.classList.add("active");
+    e.target.closest(".f").classList.add("active");
+  })
   });
 });
 
-// --
-// let s = document.querySelectorAll("ul .one .edit");
+
+// -------------------------------------
+let s = document.querySelector("ul .one .edit .s");
 
 
-//   s.addEventListener("click", e => {
+  s.addEventListener("click", b => { 
    
-//      m = document.querySelector("ul  .edit .two");
-  
-//     if (m) {
-//       if (m.style.display === "block") {
-//         m.style.display = "none";
-//       } else {
-//         m.style.display = "block";
-//       }
-//     }
+    if (b.target.closest(".s").nextElementSibling.style.display === "block") {
+       b.target.nextElementSibling.style.display = "none";
+      } else {
+       b.currentTarget.nextElementSibling.style.display = "block";
+      }
    
-//   });
+  });
 
    let lan = document.querySelector(" .styl .lan");
    lan.addEventListener("click", l =>{
