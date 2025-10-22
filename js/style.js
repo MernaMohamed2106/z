@@ -78,3 +78,13 @@ section.forEach(li => {
    
 //   });
 
+   let lan = document.querySelector(" .styl .lan");
+   lan.addEventListener("click", l =>{
+     if (l) {
+       if (l.currentTarget.dataset.lan === "en") {
+         window.open("html/arindex.html", "_self");
+       } else {
+         window.open("../index.html", "_self");
+       }
+     }
+   })

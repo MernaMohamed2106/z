@@ -1,3 +1,4 @@
+
 :root{
     --main-color:rgb(35, 143, 189);
 }
@@ -211,6 +212,6 @@ header .container .styl li .pinf li a{
     padding: 10px;
      gap: 5px;
     font-size: 20px;
-    /* display: none; */
+    display: none;
 }
 
