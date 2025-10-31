@@ -31,6 +31,42 @@ header .container{
     border-bottom: 1px solid #b3adad42;
     position: relative;
 }
+header .container .fa-list{ 
+    display: none;
+}
+@media screen {
+   @media (max-width: 767px) {
+    header .container{ 
+        padding: 15px 10px; 
+    }
+    header .container .fa-list{ 
+    right: 92px;
+    position: absolute;
+    font-size: 20px;
+    display: block;
+}
+    header .container .fa-list:hover  + .sty .styl .y { 
+     display: inline-block;
+}
+    header .container .sty .styl .y {
+        position: relative;
+        top: 52px;
+        right: -40px;
+        border-radius: 10px;
+        box-shadow: 4px 4px 13px rgba(71, 71, 71, 0.3);
+        background-color: white;
+        z-index: 100;
+        padding: 10px;
+        display: none;
+        margin-right: -22px;
+        
+    }
+    header .container .des h1{
+     padding: 10px;
+     font-size: 22px;
+}
+   } 
+}
 header .container .des{
     display: flex;
     align-items: center;
@@ -175,21 +211,50 @@ header .container .styl li .pinf li a{
     grid-template-columns: 1fr 5fr;
     height: 100vh;
 }
+.page .conten{
+}
 .page .fa-list-ul{
     display: none;
 }
 .page aside{
-    background-color:var(--main-color);
-    
+     background-color:var(--main-color); 
+     height: 100vh;   
 }
 .page aside .container{
    padding: 30px;
    width: 100%;
 }
+.page  .fa-list{ 
+  display: none;
+}
+@media screen {
+   @media (max-width: 767px) {
+     .page  .fa-list{ 
+        padding: 7px 3px;
+        z-index: 100;            
+        display: flex;
+        font-size: 20px;
+        width: 30px;
+    }
+     .page .conten .fa-list:hover + aside{ 
+        transform: translateX(0);
+    }
+   .page aside{
+      transform: translateX(-100%); 
+      transition: transform 0.4s ease; 
+      padding: 20px;
+   }
+  
+ .page aside .container ul li .f span , .page aside .container ul li .f a {
+    font-size: 20px;
+    padding: 0px 10px  0px 10px;
+   
+}
+}
+}
 
 .page aside .container ul{
    list-style: none;
-   font-size: 25px;
    display: flex;
    flex-direction: column;
    gap: 20px;
@@ -200,17 +265,29 @@ header .container .styl li .pinf li a{
    cursor: pointer;
 }
 .page aside .container ul li .f {
-   width: 90%;
-   padding: 10px 15px;
+   width: 100%;
+   padding: 10px ;
+   display: flex;
+
    /* cursor: pointer; */
+}
+.page aside .container ul li .f span , .page aside .container ul li .f a {
+    font-size: 20px;
+    padding: 0px 50px  0px 10px;
+   
 }
 .page aside .container ul li a  {
    text-decoration: none;
    color: #1e1e1e;
 }
-.page aside .container ul li span{
-   padding: 10px;
+
+.page aside .container ul li .f .fa-angle-down{
+    font-size: 20px;
 }
+.page aside .container ul li .i{
+   font-size: 20px;
+}
+
  aside .container ul li .active{
   border: 2px solid white;
   border-radius: 20px;
@@ -230,22 +307,12 @@ header .container .styl li .pinf li a{
 .page aside .container ul li .two li{
    padding: 4px;
 }
+
+
+
 @media (max-width: 1023px)  {
     .page aside .container{
-   padding: 15px 3px;
-}
-    .page aside .container ul{
-   font-size: 20px;
-   padding: 0px;
-}
-.page aside .container ul li .o,
-.page aside .container ul li .two{
-    font-size: 15px;
-}
-  }
-/* @media (max-width: 767px) {
-   .page{
-    grid-template-columns: 1fr 1fr;
+   padding: 15px 4px;
 }
     .page aside .container ul{
    font-size: 15px;
@@ -255,5 +322,11 @@ header .container .styl li .pinf li a{
 .page aside .container ul li .two{
     font-size: 10px;
 }
-  } */
+.page aside .container ul li .f span , .page aside .container ul li .f a {
+    font-size: 20px;
+    padding: 0px 30px  0px  10px  ;
+   
+}
+  }
+ 
   

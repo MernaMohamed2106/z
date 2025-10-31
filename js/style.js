@@ -35,33 +35,33 @@ color.forEach(li=>{
 })
 
 let section = document.querySelectorAll("ul .one");
-let submenu
 
 section.forEach(li => {
-  li.querySelectorAll(".f").forEach(f =>{
-      f.addEventListener("click", e => {
-         if(e.target.parentElement.dataset.text=="pro"){
-         submenu = document.querySelector("ul .one .pro");
-    }
-    else if (e.target.parentElement.dataset.text=="set"){
-          submenu = document.querySelector("ul .one .set");
-    }
-    else{
-       submenu = false;
-    }
-  
-    if (submenu) {
+  li.querySelectorAll(".f .fa-angle-down").forEach(f => {
+    f.addEventListener("click", e => {
+      let submenu;
+      const parent = e.target.closest(".f");
+      if (parent.dataset.text === "pro") {
+        submenu = document.querySelector(".one .pro");
+      } else if (parent.dataset.text === "set") {
+        submenu = document.querySelector(".one .set ");
+      } else {
+        return; 
+      }
+
       if (submenu.style.display === "block") {
         submenu.style.display = "none";
       } else {
         submenu.style.display = "block";
       }
-    }
-    e.target.parentElement.querySelectorAll(".f.active").forEach(m => {
-      m.classList.remove("active");
+
+      li.querySelectorAll(".f.active").forEach(m => {
+        m.classList.remove("active");
+      });
+
+
+      parent.classList.add("active");
     });
-    e.target.closest(".f").classList.add("active");
-  })
   });
 });
 
